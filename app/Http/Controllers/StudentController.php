@@ -65,7 +65,7 @@ class StudentController extends Controller
             ],
             'phone' => 'required|string|max:20',
             'address' => 'nullable|string|max:500',
-            'date_of_birth' => 'nullable|date',
+            'date_of_birth' => 'nullable|date|before_or_equal:today',
         ];
     }
 }
